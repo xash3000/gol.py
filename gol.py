@@ -15,7 +15,7 @@ def print_world(world, sizex, sizey):
 def get_neighbors(cell):
 	row, col = cell
 	# clockwise
-	return set([
+	return {
 		(row - 1, col - 1),
 		(row - 1, col),
 		(row - 1, col + 1),
@@ -24,7 +24,7 @@ def get_neighbors(cell):
 		(row + 1, col),
 		(row + 1, col - 1),
 		(row, col - 1)
-	])
+	}
 
 
 def evolve(world):
@@ -38,6 +38,7 @@ def evolve(world):
 			if len(world & set(get_neighbors(cell))) == 3:
 				new_world.add(cell)
 	return new_world
+
 
 if __name__ == "__main__":
 	world = set()

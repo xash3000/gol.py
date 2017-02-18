@@ -16,7 +16,7 @@ $ python3 gol.py <world_file>
 example
 
 ```
-$ python3 gol.py worlds/acron
+$ python3 gol.py worlds/acorn
 ```
 
 
